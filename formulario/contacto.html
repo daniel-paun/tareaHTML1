@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="formulario">
+        <form action="info.php" method="post" id="formulario_1" style="padding: 10px;">
+            <fieldset>
+                <legend>Datos Personales</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required><br>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" required><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="nombre@dominio.com" required><br>
+            <label for="Genero">Genero</label><br>
+            <label for="H">H</label>
+            <input type="radio" name="H" id="H">
+            <label for="M">M</label>    
+            <input type="radio" name="M" id="M">
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad" maxlength="100" minlength="18">
+        </fieldset>
+        <fieldset>
+            <legend>Gustos</legend>
+            <p>Selecciona algunas actividades que te gustaría hacer</p>
+            <label for="cicismo">Ciclismo</label>
+            <input type="checkbox" name="ciclismo" id="ciclismo">
+            <label for="senderismo">Senderismo</label>
+            <input type="checkbox" name="senderismo" id="senderismo">
+            <label for="museos">Museos</label>
+            <input type="checkbox" name="museos" id="museos">
+            <label for="ocio">Ocio</label>
+            <input type="checkbox" name="ocio" id="ocio">
+            <p>Si quieres realizar alguna otra actividad escribe en el campo de abajo</p>
+            <label for="sugerencia">Sugerencias</label>
+            <textarea name="sugerencia" id="sugerencia" cols="30" rows="10"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Rango de precios</legend>
+            <p>Del siguiente desplegable selecciona un rango de precios:</p>
+            <select name="rango_precios" id="rango_precios">
+                <option value="0">Gratis</option>
+                <option value="510">Entre 5€ y 10€</option>
+                <option value="1030">Entre 10€ y 30€</option>
+                <option value="999">Sin limite</option>
+            </select>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <button onclick="reset()">Reiniciar</button>
+        </form>
+    </div>
+    <script>
+        function reset() {
+            docuent.getElementById("formulario_1").reset();
+        }
+    </script>
+</body>
+</html>
